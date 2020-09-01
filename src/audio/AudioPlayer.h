@@ -3,6 +3,7 @@
 #include <map>
 #include "data/AudioObject.h"
 #include "data/PlayerObject.h"
+#include <cstring>
 
 #define SOURCE_POOL_SIZE 150;
 

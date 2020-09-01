@@ -10,8 +10,3 @@ target_link_libraries( audio_lib PUBLIC OpenAL )
 target_include_directories( audio_lib PUBLIC src )
 
 add_subdirectory( examples )
-
-add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD        # Adds a post-build event to MyTest
-        COMMAND ${CMAKE_COMMAND} -E copy_if_different     # which executes "cmake - E copy_if_different..."
-        "${CMAKE_BINARY_DIR}/libs/OpenAL/OpenAL32.dll"                   # <--this is in-file
-        $<TARGET_FILE_DIR:${PROJECT_NAME}>)

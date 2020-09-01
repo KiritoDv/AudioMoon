@@ -97,10 +97,10 @@ void AudioPlayer::playBackgroundSequence(int pool_id, float pitch, float gain) {
 
 
 void AudioPlayer::bindDefaultDevice() {
-	if (!defaultDeviceName)
-		defaultDeviceName = alcGetString(NULL, ALC_DEFAULT_ALL_DEVICES_SPECIFIER);
+    defaultDeviceName = nullptr;
 
 	device = alcOpenDevice(defaultDeviceName);
+
 	if (!device) {
 		fprintf(stderr, "Unable to open default device\n");
 	}
